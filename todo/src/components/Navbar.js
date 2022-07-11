@@ -1,6 +1,10 @@
 import React from 'react'
 
 export default function Navbar() {
+    const handleLogout = () => {
+		localStorage.removeItem("token");
+		window.location.reload();
+	};
     return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -12,6 +16,10 @@ export default function Navbar() {
                     <div class="navbar-nav">
                         <a class="nav-item nav-link active" href="/">Home</a>
                         <a class="nav-item nav-link" href="/additem">Add TODO</a>
+                        <a class="nav-item nav-link" onClick={handleLogout} >Logout</a> 
+					
+				
+
                     </div>    
                 </div>
             </nav>
