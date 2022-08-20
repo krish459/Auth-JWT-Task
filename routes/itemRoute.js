@@ -15,9 +15,9 @@ router.get("/getallitems", async(req,res)=>{
 });
 
 router.post("/add", async (req, res) => {
-    const { title, date, description } = req.body
+    const { title, date, description, author } = req.body
 
-    const newItem = new Item({ title, date, description })
+    const newItem = new Item({ title, date, description , author })
     try {
         newItem.save()
         res.send('Item added successfully');

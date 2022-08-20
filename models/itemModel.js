@@ -12,6 +12,10 @@ const itemSchema = mongoose.Schema({
     description:{
         type: String,
         require
+    },
+    author:{
+        type: String,
+        require
     }
 },{
     timestamps: true,

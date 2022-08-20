@@ -12,6 +12,7 @@ export default function Additemscreen() {
     const [title, settitle] = useState('');
     const [date, setdate] = useState('');
     const [description, setdescription] = useState('');
+    const [author, setauthor] = useState('');
 
     // const registerstate = useSelector(state => state.registerUserReducer)
     // const {error , loading , success}=registerstate
@@ -22,7 +23,8 @@ export default function Additemscreen() {
             const item={
                 title,
                 date,
-                description
+                description,
+                author
             }
             console.log(item);
             dispatch(addItem(item))
@@ -46,6 +48,7 @@ export default function Additemscreen() {
                         <input required type="text" placeholder='title' className='form-control'  value={title} onChange={(e)=>{settitle(e.target.value)}}/>
                         <input required type="text" placeholder='date' className='form-control' value={date} onChange={(e)=>{setdate(e.target.value)}}/>
                         <input required type="text" placeholder='description' className='form-control' value={description} onChange={(e)=>{setdescription(e.target.value)}} />
+                        <input required type="text" placeholder='Author' className='form-control' value={author} onChange={(e)=>{setauthor(e.target.value)}} />
                        <button onClick={register} className="btn mt-3 mb-3">ADD</button>
                         <br></br>
                         

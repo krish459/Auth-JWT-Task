@@ -3,6 +3,16 @@ const {userModel , validate} = require('../models/userModel')
 const bcrypt = require("bcrypt");
 // const User = require('../models/userModel')
 
+// router.get("/getallusers", async(req,res)=>{
+
+//     try {
+//         const items = await userModel.find({})
+//         res.send(items)
+//     } catch (error) {
+//         return res.status(400).json({message: error});
+//     }
+// });
+
 
 router.post("/",async(req,res)=>{
     try{
